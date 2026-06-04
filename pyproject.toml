@@ -1,0 +1,26 @@
+[project]
+name = "enterprise-omni-clinical-llm"
+version = "0.1.0"
+description = "Foundation for an enterprise omni-modal clinical documentation and clinician-support LLM project."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Project Team" }
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]

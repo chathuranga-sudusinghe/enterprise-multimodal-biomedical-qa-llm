@@ -1,0 +1,8 @@
+# Placeholder model configuration.
+# No model download or training behavior is defined in this foundation phase.
+
+model:
+  primary_direction: "Qwen2.5-Omni"
+  task_role: "clinical_documentation_and_clinician_support"
+  download_enabled: false
+  training_enabled: false

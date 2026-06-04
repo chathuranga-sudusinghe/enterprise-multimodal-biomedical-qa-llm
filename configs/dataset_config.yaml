@@ -1,0 +1,8 @@
+# Placeholder dataset configuration.
+# Do not store real patient data or dataset credentials in this repository.
+
+datasets:
+  download_enabled: false
+  local_data_dir: "artifacts/data"
+  require_deidentification_review: true
+  require_license_review: true

@@ -1,0 +1,33 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Data and model artifacts
+data/raw/
+data/interim/
+data/processed/
+artifacts/adapters/
+artifacts/logs/
+artifacts/model_cache/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

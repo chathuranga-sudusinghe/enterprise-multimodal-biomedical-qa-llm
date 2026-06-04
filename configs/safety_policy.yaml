@@ -1,0 +1,8 @@
+# Placeholder safety policy configuration.
+
+safety:
+  boundary: "clinical_documentation_and_clinician_support_only"
+  autonomous_diagnosis_allowed: false
+  autonomous_treatment_allowed: false
+  clinician_final_decision_required: true
+  real_patient_data_in_repository_allowed: false

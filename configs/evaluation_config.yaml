@@ -1,0 +1,10 @@
+# Placeholder evaluation configuration.
+
+evaluation:
+  enabled: false
+  planned_dimensions:
+    - factual_consistency
+    - completeness
+    - missing_information_detection
+    - safety_boundary_adherence
+    - clinician_review_usability
