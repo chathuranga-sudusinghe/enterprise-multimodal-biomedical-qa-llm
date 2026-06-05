@@ -1,8 +1,13 @@
-# Placeholder safety policy configuration.
+# Safety policy configuration placeholder.
 
 safety:
-  boundary: "clinical_documentation_and_clinician_support_only"
-  autonomous_diagnosis_allowed: false
-  autonomous_treatment_allowed: false
-  clinician_final_decision_required: true
-  real_patient_data_in_repository_allowed: false
+  boundary: "educational_research_biomedical_qa_only"
+  diagnosis_allowed: false
+  treatment_decision_allowed: false
+  patient_specific_medical_advice_allowed: false
+  prescription_guidance_allowed: false
+  replacement_for_medical_professionals_allowed: false
+  require_uncertainty_when_evidence_is_insufficient: true
+  separate_evidence_from_interpretation: true
+  private_patient_data_allowed: false
+  raw_datasets_committed_to_git: false

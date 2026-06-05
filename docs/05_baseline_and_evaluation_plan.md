@@ -1,23 +1,55 @@
 # Baseline and Evaluation Plan
 
-Evaluation will be designed before training is implemented.
+Evaluation will be designed before training is implemented. Baselines and fine-tuning formats will not be finalized until real raw datasets are inspected.
 
-## Planned Baselines
+## Text Baseline
 
-- Prompt-only baseline behavior.
-- Clinical summarization baseline.
-- Missing-information detection baseline.
-- Multimodal evidence summarization baseline where approved inputs are available.
+The text baseline will use base Qwen2.5-Omni in prompt-only mode on PubMedQA-style input:
 
-## Planned Evaluation Areas
+- Biomedical research question.
+- PubMed abstract context.
+- Expected yes, no, or maybe answer.
+- Evidence-aware explanation.
+- Uncertainty or safety note.
 
-- Factual consistency.
-- Completeness of clinical documentation support.
-- Missing-information detection quality.
-- Safety boundary adherence.
-- Hallucination and unsupported claim detection.
-- Clinician review usability.
+## Image-Text Baseline
+
+The image-text baseline will use base Qwen2.5-Omni in prompt-only mode on SLAKE-style input:
+
+- Medical image.
+- Question.
+- Expected answer.
+- Visual or evidence explanation.
+- Uncertainty or safety note.
+
+## Advanced Methods
+
+Planned methods include:
+
+- Supervised fine-tuning.
+- Instruction tuning.
+- LoRA.
+- QLoRA.
+- DPO preference tuning.
+- Safety tuning.
+
+## Evaluation Metrics
+
+- Yes, no, or maybe accuracy for PubMedQA.
+- Answer accuracy for SLAKE.
+- Explanation quality.
+- Evidence consistency.
+- Visual-grounding quality.
+- Hallucination rate.
+- Safety compliance.
+- JSON validity.
+- Latency.
+- Resource usage.
+
+## Comparison Plan
+
+Compare base prompt-only behavior against SFT, LoRA, QLoRA, DPO, and safety-tuned model variants.
 
 ## Current Status
 
-No baseline inference or evaluation code is implemented yet.
+No baseline inference, evaluation code, training code, dataset files, or dataset downloads are implemented yet.

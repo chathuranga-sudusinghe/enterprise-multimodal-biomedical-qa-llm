@@ -1,22 +1,35 @@
 # System Scope
 
-The system is planned as a clinician-support assistant for clinical documentation and evidence review workflows.
+The system is planned as an enterprise-ready biomedical QA and medical VQA fine-tuning project using Qwen2.5-Omni.
 
-## Intended Capabilities
+## In Scope
 
-- Draft and refine clinical documentation under clinician supervision.
-- Summarize patient records and encounter context.
-- Identify missing or incomplete information needed for documentation.
-- Summarize multimodal evidence when appropriate sources are available.
-- Support evaluation and governance workflows for healthcare use.
+- PubMedQA text QA.
+- SLAKE image-text QA.
+- Qwen2.5-Omni fine-tuning planning.
+- Prompt-only baselines.
+- Supervised fine-tuning.
+- Instruction tuning.
+- LoRA and QLoRA experiments.
+- DPO preference tuning.
+- Safety tuning.
+- Structured outputs with evidence, answer, uncertainty, and safety fields.
+- Evaluation for answer quality, evidence consistency, visual grounding, hallucination checks, safety compliance, JSON validity, latency, and resource usage.
+- Future API planning.
+
+## Out of Scope
+
+- Patient-specific diagnosis.
+- Treatment advice.
+- Prescription advice.
+- Replacement for medical professionals.
+- Restricted clinical-record datasets.
+- Private patient data.
+- Hospital record summarization.
+- Healthcare document workflow automation.
+- Medical professional recommendation workflows.
+- RAG or LlamaIndex for version 1.
 
 ## Safety Boundary
 
-This system is a clinical documentation and clinician-support assistant. It is not an autonomous diagnosis or treatment system. Final clinical decisions must be made by qualified healthcare professionals.
-
-## Non-Goals
-
-- Autonomous diagnosis.
-- Autonomous treatment recommendation.
-- Replacement of licensed healthcare professionals.
-- Storage of real patient data in this repository.
+This project is not a diagnosis system, not a treatment recommendation system, not a replacement for medical professionals, and not a patient-specific decision system. Outputs are educational, research-oriented, evidence-aware health information support.

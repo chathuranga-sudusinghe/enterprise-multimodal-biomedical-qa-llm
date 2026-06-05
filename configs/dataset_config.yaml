@@ -1,8 +1,18 @@
-# Placeholder dataset configuration.
-# Do not store real patient data or dataset credentials in this repository.
+# Dataset configuration placeholder.
+# Raw datasets are not committed to Git.
 
 datasets:
   download_enabled: false
-  local_data_dir: "artifacts/data"
-  require_deidentification_review: true
+  primary_text_dataset: "PubMedQA"
+  primary_image_text_dataset: "SLAKE"
+  backup_image_text_dataset: "PathVQA"
+  optional_later_modalities:
+    - "freely_available_video_if_useful"
+    - "freely_available_audio_if_useful"
+  local_raw_paths:
+    pubmedqa: "data/raw/pubmedqa/"
+    slake: "data/raw/slake/"
+    pathvqa: "data/raw/pathvqa/"
   require_license_review: true
+  raw_datasets_committed_to_git: false
+  private_patient_data_allowed: false

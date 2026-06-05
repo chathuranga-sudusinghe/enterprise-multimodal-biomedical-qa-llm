@@ -1,7 +1,7 @@
 [project]
-name = "enterprise-omni-clinical-llm"
+name = "enterprise-multimodal-biomedical-qa-llm"
 version = "0.1.0"
-description = "Foundation for an enterprise omni-modal clinical documentation and clinician-support LLM project."
+description = "Foundation for an enterprise multimodal biomedical QA LLM project using Qwen2.5-Omni."
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [

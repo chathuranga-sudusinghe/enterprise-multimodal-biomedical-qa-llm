@@ -1,1 +1,1 @@
-"""Inference utilities for clinician-support workflows."""
+"""Inference utilities placeholders for biomedical QA baselines."""

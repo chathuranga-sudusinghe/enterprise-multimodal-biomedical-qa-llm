@@ -1,10 +1,30 @@
-# Placeholder evaluation configuration.
+# Evaluation configuration placeholder.
 
 evaluation:
   enabled: false
-  planned_dimensions:
-    - factual_consistency
-    - completeness
-    - missing_information_detection
-    - safety_boundary_adherence
-    - clinician_review_usability
+  text_qa_metrics:
+    - pubmedqa_yes_no_maybe_accuracy
+    - evidence_consistency
+    - explanation_quality
+    - hallucination_rate
+    - safety_compliance
+    - json_validity
+    - latency
+    - resource_usage
+  image_text_qa_metrics:
+    - slake_answer_accuracy
+    - visual_grounding_quality
+    - evidence_consistency
+    - explanation_quality
+    - hallucination_rate
+    - safety_compliance
+    - json_validity
+    - latency
+    - resource_usage
+  comparison_variants:
+    - base_prompt
+    - sft
+    - lora
+    - qlora
+    - dpo
+    - safety_tuned

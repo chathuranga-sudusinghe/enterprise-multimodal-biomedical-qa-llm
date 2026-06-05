@@ -1,1 +1,1 @@
-"""Evaluation utilities for clinical documentation support."""
+"""Evaluation utilities for evidence-aware biomedical QA."""
