@@ -7,3 +7,13 @@ python -m omni_clinical_llm.data.inspect_slake --raw-dir data/raw/slake/source_f
 ```
 
 The raw SLAKE files under `data/raw/` are ignored by Git and must not be committed. The generated inspection report is intended to guide the next preprocessing and fine-tuning format decisions.
+
+## PubMedQA data inspection
+
+Run the lightweight PubMedQA raw data inspection utility after downloading the dataset locally:
+
+```bash
+python -m omni_clinical_llm.data.inspect_pubmedqa --raw-dir data/raw/pubmedqa/source_files --output artifacts/dataset_reports/pubmedqa_inspection_report.json
+```
+
+Raw data under `data/raw/` is ignored by Git and must not be committed. Generated reports under `artifacts/` are local generated outputs and should not be committed.
