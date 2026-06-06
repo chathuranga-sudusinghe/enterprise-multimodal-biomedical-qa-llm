@@ -1,41 +1,11 @@
-# Dataset Plan
+## SLAKE raw inspection workflow
 
-Dataset use must be governed by licensing, source transparency, and reproducible inspection. This repository does not include dataset files and does not download datasets in the foundation phase.
+The SLAKE dataset should be inspected from the locally downloaded raw files before any preprocessing format is finalized. Use the lightweight inspection command:
 
-## Primary Datasets
+```bash
+python -m omni_clinical_llm.data.inspect_slake --raw-dir data/raw/slake/source_files --output artifacts/dataset_reports/slake_inspection_report.json
+```
 
-- Primary text dataset: PubMedQA.
-- Primary image-text dataset: SLAKE.
-- Backup image-text dataset: PathVQA.
+The inspection report captures split row counts, detected columns, required-field gaps, missing image files, and distributions for answer type, modality, location, question language, and content type. It also records a few valid image path examples so the raw JSON-to-image linkage can be checked quickly.
 
-Optional later video or audio datasets may be considered only if they are freely available, useful, and aligned with evidence-aware biomedical QA.
-
-## Local Raw Paths
-
-Raw data should be kept outside Git at:
-
-- `data/raw/pubmedqa/`
-- `data/raw/slake/`
-- `data/raw/pathvqa/`
-
-## Dataset Workflow
-
-1. Download real raw data from official or license-valid sources.
-2. Inspect files.
-3. Inspect schema.
-4. Validate columns, labels, images, and metadata.
-5. Decide preprocessing.
-6. Decide baseline prompts.
-7. Decide fine-tuning format.
-
-## Explicit Rule
-
-No fake samples, no assumed schemas, no final preprocessing, no baseline design, and no training format before raw data inspection.
-
-## Data Rules
-
-- Do not commit raw datasets to Git.
-- Do not commit secrets or access tokens.
-- Check dataset licenses before use.
-- Use only freely available datasets aligned with the project.
-- Do not use private patient data.
+Preprocessing schemas and any future fine-tuning format should be finalized only after reviewing these inspection results. This keeps the data pipeline grounded in the actual SLAKE files available locally rather than assumptions about the dataset structure.

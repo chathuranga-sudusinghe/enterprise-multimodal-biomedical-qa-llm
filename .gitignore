@@ -25,6 +25,7 @@ artifacts/model_cache/
 *.pth
 *.bin
 *.safetensors
+artifacts/dataset_reports/
 
 # IDE / OS
 .vscode/

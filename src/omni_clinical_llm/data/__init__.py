@@ -1,1 +1,1 @@
-"""Data utilities for biomedical text QA and medical visual QA."""
+"""Data utilities for omni_clinical_llm."""
