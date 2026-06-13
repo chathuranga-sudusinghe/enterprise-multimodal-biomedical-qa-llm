@@ -21,3 +21,7 @@ python -m omni_clinical_llm.data.inspect_pubmedqa --raw-dir data/raw/pubmedqa/so
 The inspection report captures row counts by PubMedQA config, detected columns, missing required fields, final decision labels, question and answer length statistics, context size statistics, and short safe sample records.
 
 Text QA preprocessing schemas and fine-tuning examples should be finalized only after reviewing the PubMedQA inspection results. SLAKE supports the medical image-text QA track, while PathVQA remains optional backup or future data and is not required now.
+
+## Unified QA schema design
+
+After raw inspection, the next step is to map PubMedQA and SLAKE records into one reviewed instruction-tuning contract while preserving track-specific inputs and metadata. The shared format is defined in `docs/08_unified_qa_format.md`; processed dataset generation should begin only after its inclusion, filtering, language, image-path, evidence, and safety policies are approved.

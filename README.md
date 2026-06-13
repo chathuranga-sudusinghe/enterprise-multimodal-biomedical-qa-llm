@@ -17,3 +17,7 @@ python -m omni_clinical_llm.data.inspect_pubmedqa --raw-dir data/raw/pubmedqa/so
 ```
 
 Raw data under `data/raw/` is ignored by Git and must not be committed. Generated reports under `artifacts/` are local generated outputs and should not be committed.
+
+## Unified QA format
+
+PubMedQA text QA and SLAKE image-text QA use a shared instruction-tuning example contract with `task_type`, `instruction`, `input`, `target`, and `metadata` sections. Dataset-specific evidence inputs, labels, language, visual attributes, and provenance remain explicit. See `docs/08_unified_qa_format.md` for the format and preprocessing policies.
