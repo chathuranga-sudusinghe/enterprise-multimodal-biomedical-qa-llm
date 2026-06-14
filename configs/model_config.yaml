@@ -1,10 +1,10 @@
-# Model configuration placeholder.
-# No model download or training behavior is defined in this foundation phase.
+# Proposed model direction only.
+# No model download, inference, or training behavior is implemented.
 
 model:
-  primary_direction: "Qwen2.5-Omni"
+  proposed_foundation_model_direction: "Qwen2.5-Omni"
   task_role: "evidence_aware_biomedical_text_qa_and_medical_visual_qa"
   download_enabled: false
   training_enabled: false
-  local_experimentation_note: "Use local development for documentation, tests, inspection notes, prompt baselines, and small CPU-friendly utilities."
+  local_experimentation_note: "Current local scope covers documentation, tests, dataset inspection, and small CPU-friendly data utilities."
   cloud_gpu_note: "Use cloud GPUs later for LoRA, QLoRA, DPO, safety tuning, and multimodal fine-tuning after dataset inspection and license review."

@@ -1,55 +1,42 @@
 # Baseline and Evaluation Plan
 
-Evaluation will be designed before training is implemented. Baselines and fine-tuning formats will not be finalized until real raw datasets are inspected.
+Everything in this document is planned. No model has been loaded, no baseline inference has been executed, and no evaluation result exists.
 
-## Text Baseline
+## Proposed Foundation-Model Direction
 
-The text baseline will use base Qwen2.5-Omni in prompt-only mode on PubMedQA-style input:
+Qwen2.5-Omni is the proposed direction for future text and image-text experiments. The exact model revision, processor, hardware requirements, and license terms must be reviewed before integration.
 
-- Biomedical research question.
-- PubMed abstract context.
-- Expected yes, no, or maybe answer.
-- Evidence-aware explanation.
-- Uncertainty or safety note.
+## Planned Prompt-Only Baselines
 
-## Image-Text Baseline
+- PubMedQA: question and supplied abstract context to a bounded answer and yes/no/maybe label where applicable.
+- SLAKE: referenced medical image and question to a bounded answer.
 
-The image-text baseline will use base Qwen2.5-Omni in prompt-only mode on SLAKE-style input:
+Baseline prompts, decoding settings, structured outputs, and refusal behavior must be versioned before execution.
 
-- Medical image.
-- Question.
-- Expected answer.
-- Visual or evidence explanation.
-- Uncertainty or safety note.
+## Planned Fine-Tuning Methods
 
-## Advanced Methods
+- Supervised fine-tuning and instruction tuning.
+- LoRA and QLoRA.
+- DPO only with documented preference-data provenance.
+- Safety tuning only with measurable safety evaluation.
 
-Planned methods include:
+These methods are alternatives for staged experiments, not completed capabilities.
 
-- Supervised fine-tuning.
-- Instruction tuning.
-- LoRA.
-- QLoRA.
-- DPO preference tuning.
-- Safety tuning.
+## Planned Evaluation
 
-## Evaluation Metrics
+- PubMedQA yes/no/maybe accuracy where labels support it.
+- SLAKE answer accuracy by split and language.
+- Evidence consistency and visual-grounding analysis.
+- Hallucination and uncertainty behavior.
+- Safety-boundary behavior.
+- Structured-output validity.
+- Latency and resource usage.
 
-- Yes, no, or maybe accuracy for PubMedQA.
-- Answer accuracy for SLAKE.
-- Explanation quality.
-- Evidence consistency.
-- Visual-grounding quality.
-- Hallucination rate.
-- Safety compliance.
-- JSON validity.
-- Latency.
-- Resource usage.
+## Planned Comparison Sequence
 
-## Comparison Plan
+1. Base prompt-only behavior.
+2. SFT baseline.
+3. LoRA or QLoRA variants justified by resource constraints.
+4. DPO or safety-tuned variants only after earlier evidence exists.
 
-Compare base prompt-only behavior against SFT, LoRA, QLoRA, DPO, and safety-tuned model variants.
-
-## Current Status
-
-No baseline inference, evaluation code, training code, dataset files, or dataset downloads are implemented yet.
+No comparison should be claimed without versioned configuration, immutable model revision, dataset provenance, raw outputs, metric definitions, and reproducible run metadata.

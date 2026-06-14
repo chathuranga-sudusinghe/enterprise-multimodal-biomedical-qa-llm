@@ -1,50 +1,35 @@
 # Architecture
 
-The planned architecture is organized around two data tracks, a shared model layer, an evaluation layer, and a future API layer. No implementation is included in this foundation step.
+The repository currently implements a data-utility layer and documents later model and evaluation layers. Placeholder package directories do not represent working runtime components.
 
-## Data Track A: Text QA
+## Implemented Data Layer
 
-1. PubMedQA.
-2. Raw data inspection.
-3. Schema and field validation.
-4. Preprocessing decision.
-5. Prompt-only baseline.
-6. Fine-tuning experiments.
-7. Evaluation.
+### PubMedQA Text Track
 
-Target task: biomedical research question plus PubMed abstract context to yes, no, or maybe answer with evidence-aware explanation and uncertainty or safety note.
+1. Read locally obtained JSONL configurations.
+2. Inspect columns, counts, labels, missing fields, and text-length statistics.
+3. Build a unified biomedical text QA record from an already loaded record.
+4. Validate the shared and text-specific schema requirements.
 
-## Data Track B: Image-Text QA
+### SLAKE Image-Text Track
 
-1. SLAKE.
-2. Raw data inspection.
-3. Image, question, and answer validation.
-4. Preprocessing decision.
-5. Multimodal prompt-only baseline.
-6. Multimodal fine-tuning experiments.
-7. Evaluation.
+1. Read locally obtained train, validation, and test JSON files.
+2. Inspect columns, distributions, missing fields, and referenced image paths.
+3. Build a unified medical visual QA record from an already loaded record and image path.
+4. Validate the shared and image-text-specific schema requirements.
 
-Target task: medical image plus question to answer with visual or evidence explanation and uncertainty or safety note.
+## Unified QA Record Contract
 
-## Model Layer
+Both tracks use `task_type`, `instruction`, `input`, `target`, and `metadata`. This is image-text schema preparation, not a completed preprocessing pipeline or multimodal fine-tuning system.
 
-Qwen2.5-Omni is the primary model direction. Planned methods include prompt baselines, supervised fine-tuning, instruction tuning, LoRA, QLoRA, DPO, safety tuning, and later multimodal extension evaluation.
+## Proposed Model Layer
 
-## Evaluation Layer
+Qwen2.5-Omni is the proposed foundation-model direction. Prompt baselines, SFT, LoRA, QLoRA, DPO, safety tuning, and multimodal training are planned and not implemented.
 
-Evaluation will track:
+## Planned Evaluation Layer
 
-- Answer accuracy.
-- PubMedQA yes, no, or maybe accuracy.
-- Evidence consistency.
-- Visual QA accuracy.
-- Visual-grounding quality.
-- Hallucination checks.
-- Safety compliance.
-- JSON validity for structured outputs.
-- Latency.
-- Resource usage.
+Future evaluation may measure answer accuracy, evidence consistency, visual grounding, hallucination, safety behavior, structured-output validity, latency, and resource usage. No evaluation runner or results exist.
 
-## Future API Layer
+## Deferred Service Layer
 
-API design is planning-only for this repository phase. Future endpoints may support text biomedical QA, image medical VQA, broader multimodal health QA, and safety checks after baselines, evaluation, and fine-tuning plans are validated.
+An API or deployment layer is not part of the current implementation. It should be reconsidered only after reproducible baselines and evaluation evidence exist.
