@@ -1,5 +1,5 @@
-# Dataset configuration placeholder.
-# Raw datasets are not committed to Git.
+# Dataset configuration for local inspection and planned later experiments.
+# Raw datasets are not committed to Git; access and license terms require review.
 
 datasets:
   download_enabled: false
@@ -7,8 +7,8 @@ datasets:
   primary_image_text_dataset: "SLAKE"
   backup_image_text_dataset: "PathVQA"
   optional_later_modalities:
-    - "freely_available_video_if_useful"
-    - "freely_available_audio_if_useful"
+    - "licensed_video_if_reviewed_and_useful"
+    - "licensed_audio_if_reviewed_and_useful"
   local_raw_paths:
     pubmedqa: "data/raw/pubmedqa/"
     slake: "data/raw/slake/"

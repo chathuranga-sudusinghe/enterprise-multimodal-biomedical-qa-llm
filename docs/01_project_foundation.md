@@ -1,38 +1,41 @@
 # Project Foundation
 
-This repository is the foundation for the Enterprise Multimodal Biomedical QA LLM project. The project will fine-tune Qwen2.5-Omni for evidence-aware biomedical text QA and medical visual QA using freely available datasets.
-
-The foundation phase establishes the repository structure, planning documents, configuration placeholders, and lightweight automated tests. It intentionally avoids model downloads, dataset downloads, dataset files, training code, RAG, LlamaIndex, Docker, and heavy dependencies.
+Omni Biomedical LLM Fine-Tuning is a research-oriented portfolio project for evidence-aware biomedical text QA and medical image-text QA. PubMedQA supports the text track, SLAKE supports the image-text track, and Qwen2.5-Omni is the proposed foundation-model direction.
 
 ## Core Objective
 
-Build a research-grade and enterprise-ready LLM fine-tuning system using Qwen2.5-Omni as the primary model direction. The target behavior is safe, evidence-aware biomedical and medical-image question answering with explicit uncertainty and safety notes.
+Build an evidence-based progression from dataset inspection and schema validation to prompt baselines, evaluated fine-tuning experiments, and documented safety analysis. The current repository implements only the inspection, validation, and unified QA record contract stages.
+
+## Current Implementation
+
+- PubMedQA and SLAKE inspection utilities.
+- Required-field and image-path validation.
+- Unified QA record builders and validator.
+- Hermetic tests for the implemented utilities.
+- Planning documents and disabled configuration placeholders.
+
+No model loading, baseline inference, preprocessing pipeline, fine-tuning, or evaluation has been implemented.
 
 ## Target Users
 
-- Biomedical AI researchers.
-- Healthcare education teams.
-- Medical students.
-- Health information teams.
-- AI and ML engineers evaluating biomedical QA systems.
+- Biomedical AI researchers and students.
+- AI and ML engineers evaluating biomedical QA workflows.
+- Healthcare education and health-information teams working within non-clinical boundaries.
 
 ## Research Question
 
-How can Qwen2.5-Omni be fine-tuned to improve evidence-aware biomedical text QA and medical visual QA while reducing hallucination and enforcing safety boundaries?
+How can a future Qwen2.5-Omni-based system be evaluated and fine-tuned for evidence-aware biomedical text QA and medical image-text QA while measuring hallucination, uncertainty, and documented safety behavior?
 
 ## Current Scope
 
-- Define the repository structure.
-- Document the system intent, datasets, evaluation plan, and safety boundaries.
-- Provide lightweight configuration placeholders.
-- Add basic test coverage for required project files and text-safety expectations.
+- Inspect locally obtained PubMedQA and SLAKE files.
+- Preserve dataset provenance and track-specific metadata.
+- Define and validate a unified QA record contract/schema.
+- Document future baseline, fine-tuning, evaluation, and safety work.
 
-## Out of Scope
+## Out of Scope for the Current Stage
 
-- Model downloads.
-- Dataset downloads.
-- Dataset files.
-- Training implementation.
-- RAG or LlamaIndex implementation.
-- Docker or cloud deployment automation.
-- Private patient data.
+- Model loading, inference, training, and evaluation.
+- Processed dataset generation.
+- API, Docker, CI, deployment, or monitoring implementation.
+- Private patient data or patient-specific clinical use.

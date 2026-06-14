@@ -1,10 +1,10 @@
-# Unified Biomedical QA Format
+# Unified Biomedical QA Record Contract
 
 ## 1. Objective
 
-The unified preprocessing format provides one stable instruction-tuning contract for biomedical text QA and medical image-text QA. It keeps shared fields consistent while preserving dataset-specific provenance, labels, language, and visual metadata.
+The unified QA record contract/schema provides one stable representation for biomedical text QA and medical image-text QA. It keeps shared fields consistent while preserving dataset-specific provenance, labels, language, and visual metadata.
 
-This format is a design boundary only. It does not create processed datasets, load Qwen2.5-Omni, or implement training.
+The tracked schema builders implement one-record transformations and validation. They do not form a completed preprocessing pipeline, create processed datasets, load Qwen2.5-Omni, or implement training.
 
 ## 2. Supported Dataset Tracks
 
@@ -13,7 +13,7 @@ This format is a design boundary only. It does not create processed datasets, lo
 
 PathVQA remains optional future or backup data and is not part of the current preprocessing contract.
 
-## 3. Shared Instruction-Tuning Example Schema
+## 3. Shared QA Record Schema
 
 Each transformed record uses five top-level fields:
 
@@ -129,9 +129,9 @@ Optional values must not be invented. They should be omitted or represented cons
 - Preserve the original SLAKE image name in metadata.
 - Do not copy images into Git-tracked processed-data folders.
 
-## 10. Next Preprocessing Implementation
+## 10. Planned Preprocessing Implementation
 
-The next engineering step should implement a deterministic conversion pipeline that:
+A future engineering step should implement a deterministic conversion pipeline that:
 
 1. Reads each inspected raw dataset configuration or split.
 2. Applies explicit inclusion, exclusion, and language policies.
